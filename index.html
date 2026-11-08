@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>一般常識クイズ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="site-name">一般常識クイズ</p>
+  </header>
+
+  <main class="quiz-container">
+    <!-- スタート画面 -->
+    <section id="start-screen" class="screen">
+      <h1 class="title">一般常識クイズ</h1>
+      <p class="lead">全10問・4択形式です。制限時間は1問20秒！<br>何問正解できるか挑戦してみましょう！</p>
+      <button type="button" id="start-button" class="primary-button">スタート</button>
+    </section>
+
+    <!-- 問題画面 -->
+    <section id="quiz-screen" class="screen" hidden>
+      <p id="progress" class="progress"></p>
+      <div class="timer">
+        <div class="timer-track" role="progressbar" aria-label="残り時間" aria-valuemin="0" aria-valuemax="20">
+          <div id="timer-bar" class="timer-bar"></div>
+        </div>
+        <p id="timer-text" class="timer-text">残り 20 秒</p>
+      </div>
+      <h2 id="question-text" class="question-text"></h2>
+      <div id="choices" class="choices"></div>
+      <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+      <button type="button" id="next-button" class="primary-button" hidden>次の問題へ</button>
+    </section>
+
+    <!-- 結果画面 -->
+    <section id="result-screen" class="screen" hidden>
+      <h2 class="title">結果発表</h2>
+      <p id="score-text" class="score-text"></p>
+      <p id="result-message" class="result-message"></p>
+      <button type="button" id="retry-button" class="primary-button">もう一度挑戦</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="copyright">&copy; quiz-app</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

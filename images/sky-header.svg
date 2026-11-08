@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a8fd9"/>
+      <stop offset="0.6" stop-color="#7cc0f0"/>
+      <stop offset="1" stop-color="#c9e8fb"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fffbe6" stop-opacity="1"/>
+      <stop offset="0.35" stop-color="#fff3b0" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#fff3b0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="240" fill="url(#sky)"/>
+  <circle cx="1040" cy="60" r="110" fill="url(#sun)"/>
+  <g fill="#ffffff">
+    <g opacity="0.95">
+      <ellipse cx="160" cy="170" rx="90" ry="32"/>
+      <ellipse cx="120" cy="150" rx="50" ry="36"/>
+      <ellipse cx="190" cy="140" rx="60" ry="44"/>
+      <ellipse cx="240" cy="165" rx="50" ry="28"/>
+    </g>
+    <g opacity="0.85">
+      <ellipse cx="560" cy="80" rx="70" ry="22"/>
+      <ellipse cx="530" cy="66" rx="36" ry="26"/>
+      <ellipse cx="585" cy="60" rx="44" ry="30"/>
+    </g>
+    <g opacity="0.9">
+      <ellipse cx="860" cy="200" rx="110" ry="34"/>
+      <ellipse cx="810" cy="178" rx="56" ry="40"/>
+      <ellipse cx="890" cy="166" rx="70" ry="50"/>
+      <ellipse cx="960" cy="192" rx="56" ry="30"/>
+    </g>
+    <g opacity="0.7">
+      <ellipse cx="360" cy="50" rx="46" ry="14"/>
+      <ellipse cx="380" cy="40" rx="28" ry="18"/>
+    </g>
+  </g>
+</svg>

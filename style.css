@@ -1,0 +1,265 @@
+/* ===== 基本設定 ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f2f5f9;
+  color: #222;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== ヘッダー・フッター（空の画像） ===== */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  padding: 0 16px;
+  background: #7cc0f0 url("images/sky-header.svg") center / cover no-repeat;
+}
+
+.site-name {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.1em;
+  text-shadow: 0 2px 6px rgba(20, 70, 130, 0.6);
+}
+
+.site-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100px;
+  padding: 0 16px 12px;
+  background: #7cc0f0 url("images/sky-footer.svg") center / cover no-repeat;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(20, 70, 130, 0.7);
+}
+
+/* ===== カード ===== */
+.quiz-container {
+  width: calc(100% - 32px);
+  max-width: 560px;
+  margin: 32px auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.screen {
+  text-align: center;
+}
+
+.title {
+  margin: 0 0 16px;
+  font-size: 1.75rem;
+  color: #1f4e8c;
+}
+
+.lead {
+  margin: 0 0 24px;
+  color: #555;
+}
+
+/* ===== 問題画面 ===== */
+.progress {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #1f4e8c;
+}
+
+/* ===== 制限時間バー ===== */
+.timer {
+  margin-bottom: 20px;
+}
+
+.timer-track {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e3e8ef;
+}
+
+.timer-bar {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  background: #2f8fd8;
+  transition: background 0.3s;
+}
+
+.timer-bar.is-warning {
+  background: #e08a00;
+}
+
+.timer-bar.is-danger {
+  background: #c62f25;
+}
+
+.timer-text {
+  margin: 6px 0 0;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #444;
+  text-align: right;
+}
+
+.timer-text.is-danger {
+  color: #b3261e;
+}
+
+.question-text {
+  margin: 0 0 24px;
+  font-size: 1.25rem;
+}
+
+.choices {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.choice-button {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #c9d3e0;
+  border-radius: 8px;
+  background: #fff;
+  color: #222;
+  font-size: 1rem;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.choice-button:hover:not(:disabled) {
+  border-color: #1f4e8c;
+  background: #eef3fa;
+}
+
+.choice-button:focus-visible,
+.primary-button:focus-visible {
+  outline: 3px solid #f0a500;
+  outline-offset: 2px;
+}
+
+.choice-button:disabled {
+  cursor: default;
+}
+
+/* 正解・不正解の選択肢 */
+.choice-button.is-correct {
+  border-color: #1e7b3a;
+  background: #e3f4e8;
+  color: #14532a;
+  font-weight: bold;
+}
+
+.choice-button.is-wrong {
+  border-color: #b3261e;
+  background: #fbe5e3;
+  color: #7a1a14;
+  font-weight: bold;
+}
+
+/* ===== フィードバック ===== */
+.feedback {
+  min-height: 1.6em;
+  margin: 0 0 20px;
+  font-weight: bold;
+}
+
+.feedback.is-correct {
+  color: #1e7b3a;
+}
+
+.feedback.is-wrong {
+  color: #b3261e;
+}
+
+.feedback .explanation {
+  display: block;
+  margin-top: 4px;
+  font-weight: normal;
+  color: #444;
+}
+
+/* ===== 結果画面 ===== */
+.score-text {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.result-message {
+  margin: 0 0 24px;
+  color: #555;
+}
+
+/* ===== ボタン ===== */
+.primary-button {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 8px;
+  background: #1f4e8c;
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.primary-button:hover {
+  background: #163a69;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* ===== スマートフォン ===== */
+@media (max-width: 480px) {
+  .site-header {
+    height: 110px;
+  }
+
+  .site-name {
+    font-size: 1.4rem;
+  }
+
+  .site-footer {
+    height: 80px;
+  }
+
+  .quiz-container {
+    margin: 20px auto;
+    padding: 24px 16px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .question-text {
+    font-size: 1.1rem;
+  }
+}
